@@ -19,6 +19,7 @@ end
 def count_elements(array)
   output = []
   array.each do |element|
+<<<<<<< HEAD
     new_element = element
     new_element[:count] = array.count(element)
     array.delete(element)
@@ -52,6 +53,14 @@ def organize_schools(schools)
     else
       output[location] = []
       output[location].push(school)
+=======
+    binding.pry
+    if output.each{|item| item.has_value?(element[:name])}
+      element.fetch(:count) + 1
+    else
+      element[:count] = 1
+      output.push(element)
+>>>>>>> 58a06b7c0eed52380872b97e7ee9c2bd93ce459b
     end
   end
   output
